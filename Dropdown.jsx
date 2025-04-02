@@ -11,9 +11,9 @@ function Dropdown({info}) {
 
   return (
     <div className='hover' onClick={() => {setOpen(!OpenDropdown)}} style={{display:'flex',backgroundColor:'#fff',alignItems:'center',justifyContent:'space-between',flexDirection:'row',position:'relative',width:'200px',height:'35px',borderRadius:'7px',border:'2px solid #2a56cc'}}>
-        {OpenDropdown?<motion.div initial={{y:-10,opacity:0}} animate={{y:0,opacity:1}} transition={{duration:0.4}}  style={{display:'flex',flexDirection:'column',backgroundColor:'#fff',position:'absolute',height:'200px',width:'100%',borderRadius:'7px',boxShadow:' -5px 10px 20px 5px #C0C0C0',top:'50px'}}>
+        {OpenDropdown?<motion.div initial={{y:-10,opacity:0}} animate={{y:0,opacity:1}} transition={{duration:0.4}}  style={{padding:'10px 0',alignItems:'center',display:'flex',flexDirection:'column',backgroundColor:'#fff',position:'absolute',minHeight:'100px',width:'100%',borderRadius:'7px',boxShadow:' -5px 10px 20px 5px #C0C0C0',top:'50px'}}>
             {info.map((item) => (
-                <div onClick={()=>{setSelected(item)}} className='hover2' style={{display:'flex',flexDirection:'row',alignItems:'center',justifyContent:'center',width:'100%',height:'40px'}}>
+                <div onClick={()=>{setSelected(item)}} className='hover2' style={{display:'flex',flexDirection:'row',alignItems:'center',justifyContent:'center',borderRadius:'7px',width:'75%',height:'30px',margin:'7px 0'}}>
                     <p className='Title' style={{fontSize:'16px',fontWeight:'600',color:'black',margin:'0 0 0 0px'}}> {item} </p>
                 </div>
             ))}
